@@ -25,12 +25,6 @@ const Header = ({ heading }) => {
                   <u>SIGNUP</u>{" "}
                 </Link>
               </Col>
-              <Col>
-                <Link to="/signup" className="link-header">
-                  {" "}
-                  <u >LOGOUT</u>{" "}
-                </Link>
-              </Col>
             </Row>
           </Col>
         </Row>

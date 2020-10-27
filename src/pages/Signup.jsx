@@ -56,7 +56,8 @@ const Signup = () => {
                 Email address{" "}
               </Form.Label>
               <Col sm="10">
-                <Form.Control className="email"
+                <Form.Control
+                  className="email"
                   type="text"
                   placeholder="User Name"
                   value={username}
@@ -73,7 +74,8 @@ const Signup = () => {
                 Password
               </Form.Label>
               <Col sm="10">
-                <Form.Control className="email"
+                <Form.Control
+                  className="email"
                   type="password"
                   placeholder="Password"
                   value={password}

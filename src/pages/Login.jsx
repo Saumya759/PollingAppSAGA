@@ -45,7 +45,8 @@ const Login = () => {
                 Username{" "}
               </Form.Label>
               <Col sm="10">
-                <Form.Control className="email"
+                <Form.Control
+                  className="email"
                   type="text"
                   placeholder="Username"
                   value={username}
@@ -58,12 +59,13 @@ const Login = () => {
             <br />
             {err ? <Alert variant="danger"> {err} </Alert> : ""}
             <Form.Group as={Row} controlId="formBasicPassword">
-              <Form.Label column sm="2" >
+              <Form.Label column sm="2">
                 {" "}
                 Password{" "}
               </Form.Label>
               <Col sm="10">
-                <Form.Control className="email"
+                <Form.Control
+                  className="email"
                   type="password"
                   placeholder="Password"
                   value={password}
