@@ -25,7 +25,7 @@ const Login = () => {
     const formData = { username, password };
     dispatch(loginReq(formData));
   };
-  console.log(process.env);
+
   return (
     <>
       {LoginData.isLoading ? (
