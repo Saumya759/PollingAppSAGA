@@ -17,7 +17,7 @@ const Login = () => {
 
   useEffect(() => {
     if (LoginData.isLogin) {
-      history.push("/polllist");
+      history.push("/pollist");
     }
     LoginData.response ? errUpdate(LoginData.response.data) : errUpdate("");
   }, [LoginData]);

@@ -3,6 +3,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "../styles/Header.css";
 import Login from "./Login";
+import Logout from "./Logout";
 
 const Header = ({ heading }) => {
   return (
@@ -14,11 +15,11 @@ const Header = ({ heading }) => {
               <b>POLLING APP</b>
             </Col>
             <Col xs={6}>
-              <Row md={4}>
-                <Col>
+              <Row>
+              <Col xs={6} md={4}>
                   <Login />
                 </Col>
-                <Col xs={6}>
+                <Col xs={6} md={4}>
                   <Link to="/signup" className="link-header">
                     {" "}
                     <Button
@@ -29,6 +30,9 @@ const Header = ({ heading }) => {
                     />{" "}
                   </Link>
                 </Col>
+                <Col xs={6} md={4}>
+                  <Logout/>
+                  </Col>
               </Row>
             </Col>
           </Row>

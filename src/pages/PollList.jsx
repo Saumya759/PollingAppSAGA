@@ -9,7 +9,6 @@ import { listReq } from "../redux/action";
 const Home = () => {
   const dispatch = useDispatch();
   const listState = useSelector((state) => state.ListReducerstatus);
-  console.log(listState);
 
   useEffect(() => {
     dispatch(listReq());

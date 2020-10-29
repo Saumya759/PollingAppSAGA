@@ -5,8 +5,9 @@ import Header from "../components/Header";
 import "../styles/Signup.css";
 import { signupReq } from "../redux/action/index";
 import { useEffect } from "react";
+import { propTypes } from "react-bootstrap/esm/Image";
 
-const Signup = () => {
+const Signup = (props) => {
   const dispatch = useDispatch();
   const signupState = useSelector((state) => state.SignupReducerstatus);
   const [role, roleUpdate] = useState("");
@@ -14,6 +15,13 @@ const Signup = () => {
   const [password, passwordUpdate] = useState("");
   const [err, errUpdate] = useState("");
   const [success, successUpdate] = useState("");
+
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      props.history.push("/pollist");
+    }
+  }, []);
+
   useEffect(() => {
     if (signupState.response) {
       if (signupState.response.message) {
