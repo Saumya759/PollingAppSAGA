@@ -4,9 +4,7 @@ import { listSuccess, listErr } from "../action/index";
 
 function* listSaga() {
   try {
-    const response = yield fetch(
-      `https://secure-refuge-14993.herokuapp.com/list_polls`
-    );
+    const response = yield fetch(`${process.env.REACT_APP_BASE_URL}list_polls`);
     const res = yield response.json();
     res.error
       ? yield put(listErr(res.message))

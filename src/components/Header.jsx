@@ -1,41 +1,41 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "../styles/Header.css";
+import Login from "./Login";
 
 const Header = ({ heading }) => {
   return (
-    <p style={headerClass}>
-      <Container>
-        <Row>
-          <Col xs={6}>
-            <b>POLLING APP</b>
-          </Col>
-          <Col xs={6}>
-            <Row md={4}>
-              <Col>
-                <Link to="/login" className="link-header">
-                  {" "}
-                  <u>LOGIN</u>{" "}
-                </Link>
-              </Col>
-              <Col xs={6}>
-                <Link to="/signup" className="link-header">
-                  {" "}
-                  <u>SIGNUP</u>{" "}
-                </Link>
-              </Col>
-            </Row>
-          </Col>
-        </Row>
-      </Container>
-    </p>
+    <>
+      <div className="template">
+        <Container>
+          <Row>
+            <Col xs={6}>
+              <b>POLLING APP</b>
+            </Col>
+            <Col xs={6}>
+              <Row md={4}>
+                <Col>
+                  <Login />
+                </Col>
+                <Col xs={6}>
+                  <Link to="/signup" className="link-header">
+                    {" "}
+                    <Button
+                      className="button"
+                      as="input"
+                      type="submit"
+                      value="SIGNUP"
+                    />{" "}
+                  </Link>
+                </Col>
+              </Row>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    </>
   );
 };
-const headerClass = {
-  background: "pink",
-  padding: "1%",
-  fontSize: "1.5rem",
-  marginTop: 0,
-};
+
 export default Header;
