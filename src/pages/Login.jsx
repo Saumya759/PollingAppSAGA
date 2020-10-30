@@ -49,7 +49,7 @@ const Login = () => {
                 <Form.Control
                   className="email"
                   type="text"
-                  placeholder="Username"
+                  placeholder="Username" size="50"
                   value={username}
                   onChange={(event) => {
                     usernameUpdate(event.target.value);
