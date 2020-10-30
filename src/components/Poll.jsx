@@ -8,9 +8,8 @@ const Poll = ({ poll }) => {
 
       {poll.options.map((i) => {
         return (
-
           <div key={Math.random()}>
-            <input type="radio" name="option" /> 
+            <input type="radio" name="option" />
             {i.option}
           </div>
         );
